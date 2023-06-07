@@ -1,0 +1,23 @@
+<button class="btn btn-dark" (click)="create()">Novo</button>
+<table class="table table-bordered border-dark mt-3">
+  <thead class="table-dark ">
+    <tr class="table-active">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <th scope="row">{{client.id}}</th>
+      <td>{{client.name}}</td>
+      <td>{{client.email}}</td>
+      <td>
+        <button class="btn btn-primary me-1" (click)="edit(client)">Editar</button>
+        <button class="btn btn-primary" (click)="delete(client)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
